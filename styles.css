@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 20px;
+}
+
+main {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  margin-top: 71px;
+  background: yellow;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__menu {
+  background: pink;
+  flex-shrink: 0;
+}
+
+.navbar__brand {
+  flex-grow: 1;
+}
+.navbar__right {
+  flex-shrink: 0;
+  background: pink;
+}
+
+.navbar__icon {
+  /* background: pink; */
+  /* padding: 12px; */
+  display: inline-block;
+}
+
+.footer__bottom {
+  padding: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.footer__copyright {
+  font-size: 14px;
+  text-align: center;
+}
+
+.social-media {
+  margin-bottom: 12px;
+}
+
+.social-media__icon {
+  /* background: pink; */
+  padding: 12px;
+  display: inline-block;
+}
+.social-media__icon:hover {
+  opacity: 0.5;
+}
+
+.social-media__icon + .social-media__icon {
+  margin-left: 12px;
+}
+
+h1 {
+  font-family: "Merriweather", sans-serif;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .footer__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .social-media {
+    margin-bottom: 0;
+  }
+}
