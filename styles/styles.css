@@ -23,7 +23,7 @@ header {
 .main {
   flex-grow: 1;
   padding: 20px;
-  margin-top: 56px;
+  margin-top: 60px;
   background: yellow;
 }
 
@@ -49,6 +49,8 @@ footer {
 
 .navbar__burger {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar__brand {
@@ -57,12 +59,12 @@ footer {
   transform: translateX(-50%);
   font-family: "Merriweather", sans-serif;
   text-align: center;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 20px;
 }
 
 .navbar__forms {
   display: flex;
+  align-items: center;
 }
 
 #navbar-top__search,
@@ -73,16 +75,13 @@ footer {
 .navbar__icon,
 .social-media__icon,
 .slide-menu__close {
-  width: 16px;
-  height: 16px;
-}
-
-.navbar__icon + .navbar__icon {
-  margin-left: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 .navbar__link {
-  margin-left: 8px;
+  margin-left: 15px;
+  height: 20px;
 }
 
 .navbar-bottom {
@@ -115,6 +114,7 @@ footer {
   border: none;
   background: #eee;
 }
+
 .navbar-bottom__field:focus {
   outline: none;
 }
@@ -134,7 +134,7 @@ h1 {
 }
 
 .social-media__link + .social-media__link {
-  margin-left: 8px;
+  margin-left: 15px;
 }
 
 .navbar__icon:hover,
@@ -205,7 +205,7 @@ a {
 }
 
 .slide-menu__link {
-  color: #eee;
+  color: #fff;
 }
 
 .slide-menu__link:hover {
@@ -213,15 +213,27 @@ a {
 }
 
 .slide-menu__link + .slide-menu__link {
-  margin-top: 8px;
+  margin-top: 16px;
 }
 
 hr {
   width: 50%;
-  margin: 16px auto;
+  margin: 20px auto;
   height: 1px;
   border: none;
   background-color: #eee;
+}
+
+.slide-menu__login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slide-menu__login-icon {
+  filter: invert(100%);
+  width: 16px;
+  height: 16px;
 }
 
 .slide-menu-search {
@@ -235,7 +247,6 @@ hr {
   padding: 10px;
   font-size: 14px;
   border: none;
-  background: #eee;
 }
 .slide-menu-search__field:focus {
   outline: none;
@@ -248,15 +259,11 @@ hr {
   top: 10px;
   right: 10px;
   bottom: 10px;
-  opacity: 0.5;
 }
 
 @media (min-width: 600px) {
-  .header__top {
-    font-size: 16px;
-  }
   .navbar__brand {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   #navbar-top__search,
@@ -268,10 +275,6 @@ hr {
     width: 75%;
   }
 
-  .main {
-    margin-top: 60px;
-  }
-
   .main-bigger-margin {
     margin-top: 116px;
   }
@@ -281,30 +284,13 @@ hr {
     flex-direction: row;
     justify-content: space-between;
   }
+
   .social-media {
     margin-bottom: 0;
   }
+
   .slide-menu {
     width: 50%;
-  }
-
-  .navbar__icon,
-  .social-media__icon,
-  .slide-menu__close {
-    width: 20px;
-    height: 20px;
-  }
-
-  .navbar__icon + .navbar__icon {
-    margin-left: 10px;
-  }
-
-  .social-media__link + .social-media__link {
-    margin-left: 10px;
-  }
-
-  .copyright {
-    font-size: 14px;
   }
 }
 
