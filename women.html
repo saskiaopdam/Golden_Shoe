@@ -40,7 +40,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
+      <nav class="navbar-top">
         <div class="navbar__burger" onclick="showMenu()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -56,24 +56,74 @@
         <div class="navbar__brand">
           <a href="index.html" aria-label="go to homepage">GOLDEN SHOE</a>
         </div>
-        <div class="navbar__shopping-bag">
+        <div class="navbar__forms">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
             viewbox="0 0 24 24"
             class="navbar__icon"
-            aria-label="shopping bag"
-            title="shopping bag"
+            aria-label="search"
+            id="navbar-top__search"
+            onclick="toggleSearchfield()"
           >
             <path
-              d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"
+              d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"
             />
           </svg>
+          <a href="login.html" rel="noreferrer" class="navbar__link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewbox="0 0 24 24"
+              class="navbar__icon"
+              aria-label="login"
+              id="navbar-top__login"
+            >
+              <path
+                d="M12 2c2.757 0 5 2.243 5 5.001 0 2.756-2.243 5-5 5s-5-2.244-5-5c0-2.758 2.243-5.001 5-5.001zm0-2c-3.866 0-7 3.134-7 7.001 0 3.865 3.134 7 7 7s7-3.135 7-7c0-3.867-3.134-7.001-7-7.001zm6.369 13.353c-.497.498-1.057.931-1.658 1.302 2.872 1.874 4.378 5.083 4.972 7.346h-19.387c.572-2.29 2.058-5.503 4.973-7.358-.603-.374-1.162-.811-1.658-1.312-4.258 3.072-5.611 8.506-5.611 10.669h24c0-2.142-1.44-7.557-5.631-10.647z"
+              />
+            </svg>
+          </a>
+          <a href="shoppingbag.html" rel="noreferrer" class="navbar__link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewbox="0 0 24 24"
+              class="navbar__icon"
+              aria-label="shopping bag"
+            >
+              <path
+                d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"
+              />
+            </svg>
+          </a>
         </div>
       </nav>
+      <nav id="navbar-bottom" class="navbar-bottom">
+        <input
+          class="navbar-bottom__field"
+          type="text"
+          placeholder="What are you looking for?"
+        />
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewbox="0 0 24 24"
+          class="navbar-bottom__icon"
+          aria-label="search"
+        >
+          <path
+            d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"
+          />
+        </svg>
+      </nav>
     </header>
-    <main>
+    <main id="main" class="main">
       <a
         href="index.html"
         class="backlink"
@@ -137,7 +187,6 @@
               viewbox="0 0 24 24"
               class="social-media__icon"
               aria-label="facebook"
-              title="facebook"
             >
               <path
                 d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
@@ -158,7 +207,6 @@
               viewbox="0 0 24 24"
               class="social-media__icon"
               aria-label="twitter"
-              title="twitter"
             >
               <path
                 d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
@@ -178,7 +226,6 @@
               viewbox="0 0 24 24"
               class="social-media__icon"
               aria-label="instagram"
-              title="instagram"
             >
               <path
                 d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
@@ -196,7 +243,6 @@
         viewbox="0 0 24 24"
         class="slide-menu__close"
         aria-label="close menu"
-        title="close menu"
         onclick="closeMenu()"
       >
         <path
@@ -204,82 +250,46 @@
         />
       </svg>
       <div class="slide-menu__content">
-        <!-- <div class="search">
-          <input class="search__field" type="text" placeholder="Search" />
+        <a href="men.html" aria-label="men's shoes" class="slide-menu__link">
+          Men
+        </a>
+        <a
+          href="women.html"
+          aria-label="women's shoes"
+          class="slide-menu__link"
+        >
+          Women
+        </a>
+        <a href="stores.html" aria-label="stores" class="slide-menu__link">
+          Stores
+        </a>
+        <a href="careers.html" aria-label="careers" class="slide-menu__link">
+          Careers
+        </a>
+        <hr />
+        <a href="login.html" aria-label="login" class="slide-menu__link">
+          Login
+        </a>
+        <div class="slide-menu-search">
+          <input
+            class="slide-menu-search__field"
+            type="text"
+            placeholder="What are you looking for?"
+          />
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
             viewbox="0 0 24 24"
-            class="search__icon"
+            class="slide-menu-search__icon"
             aria-label="search"
-            title="search"
           >
             <path
               d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"
             />
           </svg>
-        </div> -->
-        <a
-          href="men.html"
-          aria-label="men's shoes"
-          title="men's shoes"
-          class="slide-menu__link"
-        >
-          Men
-        </a>
-        <a
-          href="women.html"
-          aria-label="women's shoes"
-          title="women's shoes"
-          class="slide-menu__link"
-        >
-          Women
-        </a>
-        <hr />
-        <div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewbox="0 0 24 24"
-            class="navbar__icon"
-            aria-label="search"
-            title="search"
-          >
-            <path
-              d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"
-            />
-          </svg>
-          <span>Search</span>
         </div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewbox="0 0 24 24"
-          class="navbar__icon"
-          aria-label="search"
-          title="search"
-        >
-          <path
-            d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"
-          />
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewbox="0 0 24 24"
-          class="navbar__icon"
-          aria-label="login"
-          title="login"
-        >
-          <path
-            d="M12 2c2.757 0 5 2.243 5 5.001 0 2.756-2.243 5-5 5s-5-2.244-5-5c0-2.758 2.243-5.001 5-5.001zm0-2c-3.866 0-7 3.134-7 7.001 0 3.865 3.134 7 7 7s7-3.135 7-7c0-3.867-3.134-7.001-7-7.001zm6.369 13.353c-.497.498-1.057.931-1.658 1.302 2.872 1.874 4.378 5.083 4.972 7.346h-19.387c.572-2.29 2.058-5.503 4.973-7.358-.603-.374-1.162-.811-1.658-1.312-4.258 3.072-5.611 8.506-5.611 10.669h24c0-2.142-1.44-7.557-5.631-10.647z"
-          />
-        </svg>
       </div>
     </nav>
   </body>
