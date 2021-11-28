@@ -9,6 +9,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: "Lato", sans-serif;
+  background-color: rgb(246, 248, 250);
 }
 
 header {
@@ -24,7 +25,7 @@ header {
   flex-grow: 1;
   padding: 20px;
   margin-top: 60px;
-  background: yellow;
+  /* background: yellow; */
 }
 
 footer {
@@ -45,6 +46,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: rgba(27, 31, 35, 0.15) 0px 1px 15px 0px;
 }
 
 .navbar__burger {
